@@ -1,4 +1,8 @@
-*.pyc
 __pycache__/
+*.pyc
 db.sqlite3
-.venv/
+postgres_data/
+.env
+venv/
+.idea/
+.vscode/
