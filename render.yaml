@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: bookstore-clone-api
+    runtime: python
+    buildCommand: "pip install -r requirements.txt && python manage.py collectstatic --noinput"
+    startCommand: "gunicorn bookstore_clone.wsgi:application"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.5
+      - key: DEBUG
+        value: False
+      - key: SECRET_KEY
+        value: "django-insecure-chave-secreta-para-entrega"
+      - key: DATABASE_URL
+        value: "postgresql://bookstore_db_n9wn_user:Ce1q66k3iZ9GTCiXPJRifSNZLIwH1Q7P@dpg-dapg2n8ae00c73d0ccb0-a/bookstore_db_n9wn"
+        
